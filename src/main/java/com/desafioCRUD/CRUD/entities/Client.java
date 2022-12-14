@@ -1,8 +1,6 @@
 package com.desafioCRUD.CRUD.entities;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.PastOrPresent;
 
 import java.time.LocalDate;
 
@@ -14,16 +12,12 @@ public class Client {
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
 
-   @NotBlank(message = "Nome não pode ser vazio ")
    private  String name;
    @Column(unique = true)
    private String cpf;
    private Double income; //renda
 
-   @PastOrPresent(message = "A data de nascimento não pode ser data futura")
-   @NotBlank(message = "Campo requerido")
    private LocalDate birthDate; // data de nascimento
-   @NotBlank(message = "Digite um numero a partir de 0")
    private Integer children; // filhos
 
 
