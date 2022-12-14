@@ -19,11 +19,11 @@ public class ClientDTO {
     private  String name;
     @Column(unique = true)
     private String cpf;
-    private Double income; //renda
+    private Double income;
 
     @PastOrPresent(message = "A data de nascimento não pode ser data futura")
-    private LocalDate birthDate; // data de nascimento
-    private Integer children; // filhos
+    private LocalDate birthDate; 
+    private Integer children;
 
 
 
